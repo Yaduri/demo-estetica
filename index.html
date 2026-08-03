@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essenza Estética & Bem-Estar | Cuidado e Sofisticação</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Essenza Estética & Bem-Estar — Experiência acolhedora e personalizada em estética facial, tratamentos corporais, sobrancelhas e massagens relaxantes em Campo Limpo Paulista.">
+  <meta name="keywords" content="estética, estética facial, limpeza de pele, tratamentos corporais, massagem relaxante, bem-estar, beleza, Campo Limpo Paulista">
+  <meta name="author" content="Essenza Estética & Bem-Estar">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Essenza Estética & Bem-Estar | Seu momento de cuidado começa aqui">
+  <meta property="og:description" content="Uma experiência pensada para valorizar sua beleza, respeitar suas necessidades e proporcionar mais bem-estar em cada atendimento.">
+  <meta property="og:image" content="assets/images/hero.jpg">
+  <meta property="og:url" content="https://essenzaestetica.com.br">
+
+  <!-- Favicon placeholder (SVG inline data uri) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23254238'/><text x='50' y='64' font-family='Georgia, serif' font-size='42' font-weight='bold' fill='%23D8BE7A' text-anchor='middle'>E</text></svg>">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. HEADER FIXO & NAVEGAÇÃO
+       ========================================================================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#inicio" class="brand-logo" aria-label="Essenza Estética & Bem-Estar - Página inicial">
+        <span class="brand-name">ESSENZA</span>
+        <span class="brand-subtitle">Estética & Bem-Estar</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-desktop" aria-label="Navegação principal">
+        <ul class="nav-links">
+          <li><a href="#inicio" class="nav-link active">Início</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#servicos" class="nav-link">Serviços</a></li>
+          <li><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
+          <li><a href="#avaliacoes" class="nav-link">Avaliações</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+
+        <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20a%20Essenza%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis." 
+           class="btn btn-whatsapp" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           id="headerWspBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <span>Agendar pelo WhatsApp</span>
+        </a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Menu móvel">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <span class="brand-name">ESSENZA</span>
+        <span class="brand-subtitle">Estética & Bem-Estar</span>
+      </div>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li><a href="#inicio" class="mobile-nav-link">Início</a></li>
+      <li><a href="#sobre" class="mobile-nav-link">Sobre</a></li>
+      <li><a href="#servicos" class="mobile-nav-link">Serviços</a></li>
+      <li><a href="#diferenciais" class="mobile-nav-link">Diferenciais</a></li>
+      <li><a href="#avaliacoes" class="mobile-nav-link">Avaliações</a></li>
+      <li><a href="#contato" class="mobile-nav-link">Contato</a></li>
+    </ul>
+
+    <div class="mobile-drawer-footer">
+      <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20a%20Essenza%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis." 
+         class="btn btn-whatsapp" 
+         target="_blank" 
+         rel="noopener noreferrer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        <span>Agendar pelo WhatsApp</span>
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ==========================================================================
+         2. HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="inicio">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <div class="hero-content reveal">
+            <!-- Customer Rating Badge -->
+            <div class="hero-rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-text">5,0 • Clientes satisfeitas</span>
+            </div>
+
+            <span class="eyebrow">ESTÉTICA • CUIDADO • BEM-ESTAR</span>
+            
+            <h1 class="hero-title">Seu momento de cuidado começa aqui</h1>
+            
+            <p class="hero-subtitle">
+              Uma experiência pensada para valorizar sua beleza, respeitar suas necessidades e proporcionar mais bem-estar em cada atendimento.
+            </p>
+
+            <div class="hero-actions">
+              <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20a%20Essenza%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis." 
+                 class="btn btn-primary" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 id="heroPrimaryBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>Agendar pelo WhatsApp</span>
+              </a>
+
+              <a href="#servicos" class="btn btn-secondary">
+                <span>Conhecer os serviços</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Graphic Showcase -->
+          <div class="hero-image-wrapper reveal reveal-delay-1">
+            <div class="hero-image-card">
+              <img src="assets/images/hero.jpg" alt="Cuidados estéticos faciais sofisticados na Essenza" width="600" height="540" loading="eager">
+            </div>
+
+            <!-- Discrete Champagne Gold Floating Badge -->
+            <div class="hero-badge-floating">
+              <div class="badge-icon">
+                ✦
+              </div>
+              <div class="badge-text">
+                <strong>Atendimento Exclusivo</strong>
+                <span>Cuidado e bem-estar sob medida</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. FAIXA DE CONFIANÇA (TRUST BAR)
+         ========================================================================== -->
+    <section class="trust-bar" aria-label="Compromissos Essenza">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <span class="trust-icon">✦</span>
+            <span>Atendimento personalizado</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">✦</span>
+            <span>Ambiente acolhedor</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">✦</span>
+            <span>Profissionais qualificadas</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">✦</span>
+            <span>Cuidado em cada detalhe</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. SOBRE A ESSENZA
+         ========================================================================== -->
+    <section class="about-section" id="sobre">
+      <div class="container">
+        <div class="about-grid">
+          
+          <div class="about-image-frame reveal">
+            <img src="assets/images/about.jpg" alt="Ambiente acolhedor e elegante da Essenza Estética" width="560" height="520" loading="lazy">
+          </div>
+
+          <div class="about-content reveal reveal-delay-1">
+            <span class="eyebrow">NOSSO PROPÓSITO</span>
+            <h2 class="section-title">Mais do que estética: um momento dedicado a você</h2>
+            
+            <div class="about-text">
+              <p>
+                Na Essenza Estética & Bem-Estar, acreditamos que cuidar de si também é reservar um tempo para desacelerar, se sentir bem e valorizar a própria beleza.
+              </p>
+              <p>
+                Criamos uma experiência acolhedora, com atendimentos personalizados e atenção aos detalhes. Cada cliente é recebida de forma individual, com espaço para conversar, esclarecer dúvidas e conhecer as opções disponíveis.
+              </p>
+              <p>
+                Nosso propósito é unir estética, cuidado e bem-estar em um ambiente preparado para tornar cada atendimento mais confortável e especial.
+              </p>
+            </div>
+
+            <div class="about-features-mini">
+              <div class="mini-feature">
+                <strong>100%</strong>
+                <span>Foco individual</span>
+              </div>
+              <div class="mini-feature">
+                <strong>Premium</strong>
+                <span>Ambiente reservado</span>
+              </div>
+              <div class="mini-feature">
+                <strong>Especialista</strong>
+                <span>Orientação dedicada</span>
+              </div>
+            </div>
+
+            <a href="#servicos" class="btn btn-primary">
+              <span>Conheça nossos serviços</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. SERVIÇOS
+         ========================================================================== -->
+    <section class="services-section" id="servicos">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="eyebrow">NOSSOS PROTOCOLOS</span>
+          <h2 class="section-title">Serviços pensados para o seu bem-estar</h2>
+          <p class="section-subtitle">
+            Conheça nossas categorias de atendimento, desenvolvidas com técnicas modernas e foco no seu conforto.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <!-- A. Estética Facial -->
+          <article class="service-card reveal">
+            <div class="service-card-image">
+              <img src="assets/images/service_facial.jpg" alt="Tratamento de Estética Facial" loading="lazy">
+              <span class="service-card-category-badge">Facial</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Estética Facial</h3>
+              <p class="service-card-desc">
+                Cuidados voltados às diferentes necessidades da pele, sempre com atenção à avaliação e às orientações profissionais.
+              </p>
+
+              <div class="service-list">
+                <span class="service-tag">Limpeza de pele</span>
+                <span class="service-tag">Hidratação facial</span>
+                <span class="service-tag">Peelings</span>
+                <span class="service-tag">Microagulhamento</span>
+                <span class="service-tag">Cuidados para acne e manchas</span>
+              </div>
+
+              <div class="service-card-footer">
+                <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20de%20Est%C3%A9tica%20Facial%20da%20Essenza." 
+                   class="btn btn-secondary" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   style="width: 100%;">
+                  <span>Consultar pelo WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- B. Estética Corporal -->
+          <article class="service-card reveal reveal-delay-1">
+            <div class="service-card-image">
+              <img src="assets/images/service_body.jpg" alt="Tratamentos de Estética Corporal" loading="lazy">
+              <span class="service-card-category-badge">Corporal</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Estética Corporal</h3>
+              <p class="service-card-desc">
+                Protocolos e cuidados personalizados para diferentes objetivos e necessidades.
+              </p>
+
+              <div class="service-list">
+                <span class="service-tag">Tratamentos corporais</span>
+                <span class="service-tag">Cuidados para estrias</span>
+                <span class="service-tag">Drenagem</span>
+                <span class="service-tag">Massagem modeladora</span>
+                <span class="service-tag">Protocolos personalizados</span>
+              </div>
+
+              <div class="service-card-footer">
+                <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20as%20op%C3%A7%C3%B5es%20de%20Est%C3%A9tica%20Corporal%20da%20Essenza." 
+                   class="btn btn-secondary" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   style="width: 100%;">
+                  <span>Conhecer opções</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- C. Sobrancelhas e Cílios -->
+          <article class="service-card reveal">
+            <div class="service-card-image">
+              <img src="assets/images/service_brows.jpg" alt="Design de Sobrancelhas e Cílios" loading="lazy">
+              <span class="service-card-category-badge">Olhar</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Sobrancelhas e Cílios</h3>
+              <p class="service-card-desc">
+                Serviços pensados para valorizar a expressão e respeitar as características de cada cliente.
+              </p>
+
+              <div class="service-list">
+                <span class="service-tag">Design de sobrancelhas</span>
+                <span class="service-tag">Henna</span>
+                <span class="service-tag">Lash lifting</span>
+                <span class="service-tag">Alongamento de cílios</span>
+              </div>
+
+              <div class="service-card-footer">
+                <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20para%20Sobrancelhas%20e%20C%C3%ADlios." 
+                   class="btn btn-secondary" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   style="width: 100%;">
+                  <span>Quero saber mais</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- D. Massagens e Bem-Estar -->
+          <article class="service-card reveal reveal-delay-1">
+            <div class="service-card-image">
+              <img src="assets/images/service_massage.jpg" alt="Massagens e Experiências de Bem-Estar" loading="lazy">
+              <span class="service-card-category-badge">Bem-Estar</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Massagens e Bem-Estar</h3>
+              <p class="service-card-desc">
+                Momentos dedicados ao relaxamento, conforto e cuidado com você.
+              </p>
+
+              <div class="service-list">
+                <span class="service-tag">Massagem relaxante</span>
+                <span class="service-tag">Drenagem</span>
+                <span class="service-tag">Massagem modeladora</span>
+                <span class="service-tag">Experiências de bem-estar</span>
+              </div>
+
+              <div class="service-card-footer">
+                <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20Massagens%20e%20Bem-Estar." 
+                   class="btn btn-secondary" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   style="width: 100%;">
+                  <span>Consultar horários</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. DIFERENCIAIS
+         ========================================================================== -->
+    <section class="differentials-section" id="diferenciais">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="eyebrow">POR QUE ESCOLHER A ESSENZA</span>
+          <h2 class="section-title">Cuidado que você percebe em cada etapa</h2>
+          <p class="section-subtitle">
+            Cada detalhe do nosso espaço e atendimento foi desenhado para proporcionar uma experiência tranquila e acolhedora.
+          </p>
+        </div>
+
+        <div class="differentials-grid">
+          
+          <div class="differential-card reveal">
+            <div class="differential-number">01</div>
+            <h3 class="differential-title">Atendimento personalizado</h3>
+            <p class="differential-desc">
+              Cada atendimento começa com atenção às necessidades e preferências de quem nos procura.
+            </p>
+          </div>
+
+          <div class="differential-card reveal reveal-delay-1">
+            <div class="differential-number">02</div>
+            <h3 class="differential-title">Ambiente acolhedor</h3>
+            <p class="differential-desc">
+              Um espaço preparado para proporcionar conforto, tranquilidade e bem-estar.
+            </p>
+          </div>
+
+          <div class="differential-card reveal reveal-delay-2">
+            <div class="differential-number">03</div>
+            <h3 class="differential-title">Equipe atenciosa</h3>
+            <p class="differential-desc">
+              Profissionais comprometidas em orientar e oferecer uma experiência agradável.
+            </p>
+          </div>
+
+          <div class="differential-card reveal">
+            <div class="differential-number">04</div>
+            <h3 class="differential-title">Serviços integrados</h3>
+            <p class="differential-desc">
+              Diferentes opções de estética e bem-estar reunidas em um só espaço.
+            </p>
+          </div>
+
+          <div class="differential-card reveal reveal-delay-1">
+            <div class="differential-number">05</div>
+            <h3 class="differential-title">Atendimento com atenção aos detalhes</h3>
+            <p class="differential-desc">
+              Do primeiro contato ao pós-atendimento, valorizamos uma experiência cuidadosa e transparente.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. COMO FUNCIONA O AGENDAMENTO
+         ========================================================================== -->
+    <section class="schedule-section">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="eyebrow">PASSO A PASSO</span>
+          <h2 class="section-title">Como funciona o agendamento</h2>
+          <p class="section-subtitle">
+            Agendar o seu momento na Essenza é simples e rápido.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+
+          <div class="step-card reveal">
+            <div class="step-num">01</div>
+            <h3 class="step-title">Entre em contato</h3>
+            <p class="step-desc">Clique no WhatsApp e envie uma mensagem.</p>
+          </div>
+
+          <div class="step-card reveal reveal-delay-1">
+            <div class="step-num">02</div>
+            <h3 class="step-title">Conte o que procura</h3>
+            <p class="step-desc">Informe o serviço desejado ou explique sua necessidade.</p>
+          </div>
+
+          <div class="step-card reveal reveal-delay-2">
+            <div class="step-num">03</div>
+            <h3 class="step-title">Consulte a disponibilidade</h3>
+            <p class="step-desc">Verifique os dias e horários disponíveis.</p>
+          </div>
+
+          <div class="step-card reveal reveal-delay-3">
+            <div class="step-num">04</div>
+            <h3 class="step-title">Confirme seu atendimento</h3>
+            <p class="step-desc">Receba as orientações necessárias e finalize seu agendamento.</p>
+          </div>
+
+        </div>
+
+        <div class="schedule-cta reveal">
+          <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20a%20disponibilidade%20de%20hor%C3%A1rios%20para%20atendimento." 
+             class="btn btn-primary" 
+             target="_blank" 
+             rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>Consultar horários</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. CTA PRINCIPAL (DEEP GREEN BANNER)
+         ========================================================================== -->
+    <section class="main-cta-section">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <span class="eyebrow">AGENDE SEU ATENDIMENTO</span>
+          <h2 class="section-title">Reserve um momento para cuidar de você</h2>
+          <p class="section-subtitle">
+            Fale com nossa equipe, tire suas dúvidas e consulte os horários disponíveis.
+          </p>
+          <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20equipe%20Essenza%20e%20reservar%20um%20momento%20de%20cuidado." 
+             class="btn btn-gold" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             id="bannerGoldBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>Agendar pelo WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         9. AVALIAÇÕES (TESTIMONIALS)
+         ========================================================================== -->
+    <section class="testimonials-section" id="avaliacoes">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="eyebrow">DEPOIMENTOS</span>
+          <h2 class="section-title">Experiências que inspiram confiança</h2>
+          <p class="section-subtitle">
+            Veja o que dizem quem já vivenciou o atendimento Essenza.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+
+          <!-- Avaliação 1 -->
+          <div class="testimonial-card reveal">
+            <span class="quote-mark">“</span>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              “Ambiente lindo e acolhedor. Fui muito bem atendida e me senti confortável durante toda a experiência.”
+            </p>
+            <span class="testimonial-author">Cliente demonstrativa</span>
+          </div>
+
+          <!-- Avaliação 2 -->
+          <div class="testimonial-card reveal reveal-delay-1">
+            <span class="quote-mark">“</span>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              “Profissionais atenciosas, atendimento cuidadoso e um espaço muito agradável.”
+            </p>
+            <span class="testimonial-author">Cliente demonstrativa</span>
+          </div>
+
+          <!-- Avaliação 3 -->
+          <div class="testimonial-card reveal reveal-delay-2">
+            <span class="quote-mark">“</span>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              “Adorei a experiência. Tudo foi explicado com clareza e o atendimento foi excelente.”
+            </p>
+            <span class="testimonial-author">Cliente demonstrativa</span>
+          </div>
+
+        </div>
+
+        <p class="testimonials-disclaimer reveal">
+          * Avaliações utilizadas apenas para demonstração do layout.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         10. FAQ ACCORDION
+         ========================================================================== -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="eyebrow">DÚVIDAS FREQUENTES</span>
+          <h2 class="section-title">Perguntas Frequentes</h2>
+          <p class="section-subtitle">
+            Respostas para as principais dúvidas sobre nossos atendimentos e agendamentos.
+          </p>
+        </div>
+
+        <div class="faq-container reveal">
+
+          <!-- FAQ Item 1 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Como faço para agendar?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Para agendar seu atendimento, basta clicar em qualquer botão de WhatsApp do site. Nossa equipe responderá diretamente para consultar horários disponíveis e confirmar suas preferências.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Preciso saber qual serviço escolher?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Não é necessário saber com antecedência. Você pode nos contar suas necessidades e objetivos pelo WhatsApp para receber orientações antes de definir o protocolo ideal.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>É necessário agendar com antecedência?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Recomendamos agendar previamente para garantir o dia e horário de sua preferência, mantendo nosso padrão de atendimento exclusivo e sem pressa.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quanto tempo dura o atendimento?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                A duração varia de acordo com o serviço escolhido (geralmente entre 45 e 90 minutos). O tempo estimado é informado no momento da confirmação do agendamento.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quais formas de pagamento são aceitas?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Aceitamos PIX, cartões de crédito e débito, além de opções de parcelamento conforme os protocolos selecionados.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Onde a Essenza está localizada?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Nosso espaço fica localizado na Rua das Flores, 250 — Centro, em Campo Limpo Paulista — SP, em um ambiente pensado para o seu conforto.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         11. CONTATO E LOCALIZAÇÃO
+         ========================================================================== -->
+    <section class="contact-section" id="contato">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <div class="contact-info reveal">
+            <span class="eyebrow">VENHA NOS CONHECER</span>
+            <h2 class="contact-brand-title">Essenza Estética & Bem-Estar</h2>
+            
+            <div class="contact-detail-group">
+              
+              <!-- Endereço -->
+              <div class="contact-detail-item">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-8-7.5-8-12a8 8 0 1116 0c0 4.5-8 12-8 12z"/><circle cx="12" cy="9" r="3"/></svg>
+                </div>
+                <div class="contact-detail-text">
+                  <h4>Endereço</h4>
+                  <p>Rua das Flores, 250<br>Centro — Campo Limpo Paulista — SP</p>
+                </div>
+              </div>
+
+              <!-- Horários -->
+              <div class="contact-detail-item">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <div class="contact-detail-text">
+                  <h4>Horários de Atendimento</h4>
+                  <p>Terça a sexta: 09h às 20h<br>Sábado: 08h às 18h<br>Domingo e segunda: Fechado</p>
+                </div>
+              </div>
+
+              <!-- Redes Sociais -->
+              <div class="contact-detail-item">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </div>
+                <div class="contact-detail-text">
+                  <h4>Instagram Fictício</h4>
+                  <p>@essenza.estetica</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="contact-actions">
+              <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20localiza%C3%A7%C3%A3o%20e%20atendimento%20da%20Essenza." 
+                 class="btn btn-whatsapp" 
+                 target="_blank" 
+                 rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>Falar pelo WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Demonstration Map Preview Area -->
+          <div class="map-frame reveal reveal-delay-1">
+            <div class="map-placeholder">
+              <div class="map-pin-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-8-7.5-8-12a8 8 0 1116 0c0 4.5-8 12-8 12z"/><circle cx="12" cy="9" r="3"/></svg>
+              </div>
+              <h3 class="map-title">Essenza Studio</h3>
+              <p class="map-address">Rua das Flores, 250 — Centro<br>Campo Limpo Paulista — SP</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       12. FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="brand-name">ESSENZA</span>
+            <span class="brand-subtitle">Estética & Bem-Estar</span>
+          </div>
+          <p class="footer-desc">
+            Estética, cuidado e bem-estar em cada detalhe. Uma experiência feita para desacelerar e valorizar quem você é.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Navegação</h4>
+            <ul class="footer-nav">
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#diferenciais">Diferenciais</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contato</h4>
+            <ul class="footer-nav">
+              <li><a href="https://wa.me/5511999999999?text=Ol%C3%A1!" target="_blank" rel="noopener noreferrer">WhatsApp: (11) 99999-9999</a></li>
+              <li><a href="#contato">Rua das Flores, 250 — SP</a></li>
+              <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">@essenza.estetica</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 ESSENZA Estética & Bem-Estar. Todos os direitos reservados.</span>
+        <span class="footer-demo-tag">Projeto demonstrativo criado para apresentação de portfólio. Marca fictícia.</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       13. FLOATING WHATSAPP BUTTON
+       ========================================================================== -->
+  <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20a%20Essenza%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis." 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Agendar ou tirar dúvidas pelo WhatsApp"
+     id="whatsappFloatBtn">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
