@@ -1,16 +1,65 @@
 /**
  * ESSENZA Estética & Bem-Estar - Client JavaScript
- * Pure Vanilla JS handling layout interactions, mobile drawer, scroll reveals,
- * FAQ accordion, and dynamic WhatsApp action links.
+ * Pure Vanilla JS handling layout interactions, Intro Preloader Curtain,
+ * mobile drawer, scroll reveals, FAQ accordion, and dynamic WhatsApp action links.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initIntroPreloader();
   initHeaderScroll();
   initMobileMenu();
   initFaqAccordion();
   initScrollReveal();
   initActiveNavHighlight();
 });
+
+/**
+ * Opening Preloader Curtain Animation (0% to 100% Counter)
+ */
+function initIntroPreloader() {
+  const preloader = document.getElementById('introPreloader');
+  const counterEl = document.getElementById('preloaderCounter');
+  const fillEl = document.getElementById('preloaderFill');
+
+  if (!preloader || !counterEl || !fillEl) return;
+
+  // Lock scroll during intro animation
+  document.body.style.overflow = 'hidden';
+
+  let currentCount = 0;
+  const targetCount = 100;
+  const duration = 1200; // 1.2s total count duration
+  const intervalTime = 15;
+  const step = targetCount / (duration / intervalTime);
+
+  const timer = setInterval(() => {
+    currentCount += step;
+    if (currentCount >= targetCount) {
+      currentCount = targetCount;
+      clearInterval(timer);
+      
+      counterEl.textContent = '100%';
+      fillEl.style.width = '100%';
+
+      // Delay slightly at 100% before lifting curtain
+      setTimeout(() => {
+        preloader.classList.add('loaded');
+        document.body.style.overflow = '';
+        
+        // Trigger reveal animations on initial viewport elements
+        setTimeout(() => {
+          document.querySelectorAll('.hero-lookbook-section .reveal').forEach(el => {
+            el.classList.add('revealed');
+          });
+        }, 300);
+      }, 250);
+    } else {
+      const rounded = Math.floor(currentCount);
+      counterEl.textContent = `${rounded}%`;
+      fillEl.style.width = `${rounded}%`;
+    }
+  }, intervalTime);
+}
 
 /**
  * Header shrink effect on window scroll
@@ -74,7 +123,6 @@ function initMobileMenu() {
     link.addEventListener('click', closeMenu);
   });
 
-  // Close menu on Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && mobileDrawer.classList.contains('active')) {
       closeMenu();
@@ -83,27 +131,27 @@ function initMobileMenu() {
 }
 
 /**
- * FAQ Accordion expand & collapse with auto-height adjustment
+ * FAQ Accordion expand & collapse
  */
 function initFaqAccordion() {
-  const faqItems = document.querySelectorAll('.faq-item');
+  const faqItems = document.querySelectorAll('.faq-accordion-item');
 
   faqItems.forEach(item => {
-    const questionBtn = item.querySelector('.faq-question');
-    const answerEl = item.querySelector('.faq-answer');
+    const questionBtn = item.querySelector('.faq-accordion-header');
+    const answerEl = item.querySelector('.faq-accordion-content');
 
     if (!questionBtn || !answerEl) return;
 
     questionBtn.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
 
-      // Close other accordion items for clean UX
+      // Close other accordion items
       faqItems.forEach(otherItem => {
         if (otherItem !== item && otherItem.classList.contains('active')) {
           otherItem.classList.remove('active');
-          const otherAnswer = otherItem.querySelector('.faq-answer');
+          const otherAnswer = otherItem.querySelector('.faq-accordion-content');
           if (otherAnswer) otherAnswer.style.maxHeight = null;
-          const otherBtn = otherItem.querySelector('.faq-question');
+          const otherBtn = otherItem.querySelector('.faq-accordion-header');
           if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
         }
       });
@@ -129,7 +177,6 @@ function initScrollReveal() {
   const revealElements = document.querySelectorAll('.reveal');
 
   if (!('IntersectionObserver' in window)) {
-    // Fallback if IntersectionObserver is not supported
     revealElements.forEach(el => el.classList.add('revealed'));
     return;
   }
