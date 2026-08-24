@@ -23,6 +23,15 @@ function initIntroPreloader() {
 
   if (!preloader || !counterEl || !fillEl) return;
 
+  // Check for prefers-reduced-motion
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) {
+    preloader.classList.add('loaded');
+    document.body.style.overflow = '';
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('revealed'));
+    return;
+  }
+
   // Lock scroll during intro animation
   document.body.style.overflow = 'hidden';
 
